@@ -4,7 +4,7 @@ const app = express();
 const PORT = 3002;
 
 app.get("/", (req, res) => {
-  res.send(`<h1>Hello Node.js!</h1>`);
+  res.sendFile(`${__dirname}/index.html`);
 });
 
 app.get("/home", (req, res) => {
