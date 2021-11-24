@@ -1,0 +1,25 @@
+{
+  "name": "blog-express",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "node src/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "clean:init": "rm -fr node_modules yarn.lock && yarn && yarn dev"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wuzhe0912/blog-express.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wuzhe0912/blog-express/issues"
+  },
+  "homepage": "https://github.com/wuzhe0912/blog-express#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
