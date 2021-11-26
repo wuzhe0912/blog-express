@@ -1,5 +1,6 @@
 const express = require("express");
 const bodyParser = require("body-parser");
+const https = require("https");
 
 const app = express();
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -12,6 +13,25 @@ app.get("/", (req, res) => {
 
 app.get("/bmiCalculator", (req, res) => {
   res.sendFile(`${__dirname}/bmiCalculator.html`);
+});
+
+app.get("/weather", (req, res) => {
+  const url =
+    "https://api.openweathermap.org/data/2.5/weather?q=taipei&appid=7626871ca74fa6ff38a6cb5ff05a6dc8";
+
+  https.get(url, (response) => {
+    console.log(response.statusCode);
+
+    response.on("data", (data) => {
+      const weatherData = JSON.parse(data);
+      const { temp } = weatherData.main;
+      const { description } = weatherData.weather[0];
+      console.log(temp);
+      console.log(description);
+    });
+  });
+
+  res.sendFile(`${__dirname}/weather.html`);
 });
 
 app.post("/bmiCalculator", (req, res) => {
