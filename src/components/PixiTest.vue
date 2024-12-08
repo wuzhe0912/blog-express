@@ -1,8 +1,7 @@
 <script setup lang="ts">
-import { ref, onMounted } from "vue";
-import * as PIXI from "pixi.js";
+import { ref, onMounted, onUnmounted } from 'vue';
 </script>
 
 <template></template>
 
-<style scoped></style>
+<style scoped lang="scss"></style>
