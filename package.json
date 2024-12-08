@@ -1,27 +1,25 @@
 {
-  "name": "blog-express",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "name": "pixijs-demo",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
   "scripts": {
-    "dev": "nodemon src/index.js",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "clean:init": "rm -fr node_modules yarn.lock && yarn && yarn dev"
+    "dev": "vite",
+    "build": "vue-tsc -b && vite build",
+    "preview": "vite preview"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/wuzhe0912/blog-express.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/wuzhe0912/blog-express/issues"
-  },
-  "homepage": "https://github.com/wuzhe0912/blog-express#readme",
   "dependencies": {
-    "body-parser": "^1.19.0",
-    "express": "^4.17.1",
-    "nodemon": "^2.0.15"
+    "pixi.js": "^8.6.3",
+    "vue": "^3.5.13"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^5.2.1",
+    "autoprefixer": "^10.4.20",
+    "postcss": "^8.4.49",
+    "sass": "^1.82.0",
+    "tailwindcss": "^3.4.16",
+    "typescript": "~5.6.2",
+    "vite": "^6.0.1",
+    "vue-tsc": "^2.1.10"
   }
 }
